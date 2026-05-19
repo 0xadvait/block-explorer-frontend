@@ -319,7 +319,7 @@ const HeroBanner = () => {
                   label="TEE Operators"
                   iconName="nft_shield"
                   loading={ teeRegistryQuery.isPlaceholderData }
-                  value={ `${ teeStats.activeNodes }/${ teeStats.enabledNodes }` }
+                  value={ teeStats.activeNodes.toLocaleString() }
                 />
                 <MetricCard
                   href={ route({ pathname: '/address/[hash]', query: { hash: settlementContractAddress } }) }
